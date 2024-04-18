@@ -21,4 +21,19 @@ module Exercise4 (
     output logic [7:0] out
 );
 
+always_comb begin
+  case (cs)
+    1: begin
+      case (sel)
+        2'b00: out = alpha;
+        2'b01: out = beta;
+        2'b10: out = gamma;
+        default: out = 0; 
+      endcase
+    end
+    default: out = 0; 
+  endcase
+end
+
+
 endmodule

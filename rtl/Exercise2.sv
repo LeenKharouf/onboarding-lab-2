@@ -13,4 +13,6 @@ module Exercise2 (
     output logic [15:0] out
 );
 
+out <= {out[14:0], out[15] ^ out[13] ^ out[12] ^ out[10]};
+
 endmodule
